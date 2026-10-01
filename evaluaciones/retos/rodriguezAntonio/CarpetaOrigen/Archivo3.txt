@@ -1,3 +1,0 @@
-Este es el segundo archivo
-
-Esta es una modificacion del archivo 3 para evidenciar el commit
