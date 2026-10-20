@@ -6,16 +6,22 @@ public class ScannerEdad {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Cual es tu edad?  ");
-
         int edad = scanner.nextInt();
         final int EDAD_MINIMA = 18;
 
-        String valoracion = "Eres " + (edad>=EDAD_MINIMA?"mayor":"menor") + " de edad ";
+      String mensaje;
+        if (edad>=EDAD_MINIMA){
+            mensaje = "P";
+        } else {
+            mensaje = "No p";
+        }
 
-        System.out.print(valoracion);
+        mensaje = mensaje + "uedes pasar";
+
+        System.out.println(mensaje);
 
         scanner.close();
 
     }
-    
+
 }

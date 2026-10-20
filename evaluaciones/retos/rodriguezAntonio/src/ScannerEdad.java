@@ -14,8 +14,14 @@ public class ScannerEdad {
 
         System.out.print(valoracion);
 
+        if (edad>=EDAD_MINIMA){
+            System.out.println("Puedes pasar");
+        } else {
+            System.out.println("No puedes pasar");
+        }
+
         scanner.close();
 
     }
-    
+
 }
