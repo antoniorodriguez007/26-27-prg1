@@ -5,10 +5,14 @@ import java.util.Scanner;
 public class CajeroEuros {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ingrese la cantidad que debe");
+
+
+        System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
+        System.out.println("Bienvenido al pago de tasas!");
+        System.out.println("Ingrese la cantidad que debe...");
         int debe = scanner.nextInt();
 
-        System.out.println("Ingrese la cantidad que paga");
+        System.out.println("Ingrese la cantidad que paga...");
         int paga = scanner.nextInt();
 
         final int CAMBIO = paga - debe;
@@ -53,6 +57,7 @@ public class CajeroEuros {
         final String MENSAJE = (CAMBIO >= 0)?"El cambio es: " + CAMBIO + " euros":"Error: No hay cambio suficiente, faltan: " + (CAMBIO * -1) + " euros";
 
         System.out.println(MENSAJE);
+        System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
         scanner.close();
 
     }
