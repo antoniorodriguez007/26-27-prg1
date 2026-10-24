@@ -50,6 +50,9 @@ public class CajeroEuros {
         System.out.println("Monedas de 2: " + moneda2);
         System.out.println("Monedas de 1: " + moneda1);
 
+        final String MENSAJE = (CAMBIO >= 0)?"El cambio es: " + CAMBIO + " euros":"Error: No hay cambio suficiente, faltan: " + (CAMBIO * -1) + " euros";
+
+        System.out.println(MENSAJE);
         scanner.close();
 
     }
