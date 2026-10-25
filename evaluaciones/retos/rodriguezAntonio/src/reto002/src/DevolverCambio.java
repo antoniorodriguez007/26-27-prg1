@@ -9,41 +9,48 @@ public class DevolverCambio {
         System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
         System.out.println("Bienvenido al pago de tasas!");
         System.out.println("Ingrese la cantidad que debe...");
-        int debe = scanner.nextInt();
+        double debe = scanner.nextDouble();
 
         System.out.println("Ingrese la cantidad que paga...");
-        int paga = scanner.nextInt();
+        double paga = scanner.nextDouble();
 
-        final int CAMBIO = paga - debe;
-        int resto = CAMBIO;
+        final int ENTERO = (int) (paga - debe);
+        final int CENTAVO = (int) ((paga - debe - ENTERO) * 100);
+
+        int resto_entero = ENTERO;
+        int resto_centavo = CENTAVO;
 
         final int BILLETE100 = 100;
-        int billete100 = resto / BILLETE100;
-        resto = resto % BILLETE100;
+        int billete100 = resto_entero / BILLETE100;
+        resto_entero = resto_entero % BILLETE100;
 
         final int BILLETE50 = 50;
-        int billete50 = resto / BILLETE50;
-        resto = resto % BILLETE50;
+        int billete50 = resto_entero / BILLETE50;
+        resto_entero = resto_entero % BILLETE50;
 
         final int BILLETE20 = 20;
-        int billete20 = resto / BILLETE20;
-        resto = resto % BILLETE20;
+        int billete20 = resto_entero / BILLETE20;
+        resto_entero = resto_entero % BILLETE20;
 
         final int BILLETE10 = 10;
-        int billete10 = resto / BILLETE10;
-        resto = resto % BILLETE10;
+        int billete10 = resto_entero / BILLETE10;
+        resto_entero = resto_entero % BILLETE10;
 
         final int BILLETE5 = 5;
-        int billete5 = resto / BILLETE5;
-        resto = resto % BILLETE5;
+        int billete5 = resto_entero / BILLETE5;
+        resto_entero = resto_entero % BILLETE5;
 
         final int MONEDA2 = 2;
-        int moneda2 = resto / MONEDA2;
-        resto = resto % MONEDA2;
+        int moneda2 = resto_entero / MONEDA2;
+        resto_entero = resto_entero % MONEDA2;
 
         final int MONEDA1 = 1;
-        int moneda1 = resto / MONEDA1;
-        resto = resto % MONEDA1;
+        int moneda1 = resto_entero / MONEDA1;
+        resto_entero = resto_entero % MONEDA1;
+
+        final int MONEDA50 = 50;
+        int moneda50 = resto_centavo / MONEDA50;
+        resto_centavo = resto_centavo % MONEDA50;
 
         System.out.println("Billetes de 100: " + billete100);
         System.out.println("Billetes de 50: " + billete50);
@@ -52,8 +59,9 @@ public class DevolverCambio {
         System.out.println("Billetes de 5: " + billete5);
         System.out.println("Monedas de 2: " + moneda2);
         System.out.println("Monedas de 1: " + moneda1);
+        System.out.println("Monedas de 0.50:  " + moneda50);
 
-         final String MENSAJE = (CAMBIO >= 0)?"El cambio es: " + CAMBIO + " euros":"Error: No hay cambio suficiente, faltan: " + (CAMBIO * -1) + " euros";
+         final String MENSAJE = (ENTERO >= 0)?"El cambio es: " + ENTERO + " euros":"Error: No hay cambio suficiente, faltan: " + (ENTERO * -1) + " euros";
 
         System.out.println(MENSAJE);
         System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
