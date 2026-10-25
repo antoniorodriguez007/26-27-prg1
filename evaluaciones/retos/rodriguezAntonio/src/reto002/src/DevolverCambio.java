@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 public class DevolverCambio {
     public static void main(String[] args) {
-            Scanner scanner = new Scanner(System.in);
-
+        Scanner scanner = new Scanner(System.in);
 
         System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
         System.out.println("Bienvenido al pago de tasas!");
@@ -46,7 +45,19 @@ public class DevolverCambio {
         int moneda1 = resto / MONEDA1;
         resto = resto % MONEDA1;
 
-        
+        System.out.println("Billetes de 100: " + billete100);
+        System.out.println("Billetes de 50: " + billete50);
+        System.out.println("Billetes de 20: " + billete20);
+        System.out.println("Billetes de 10: " + billete10);
+        System.out.println("Billetes de 5: " + billete5);
+        System.out.println("Monedas de 2: " + moneda2);
+        System.out.println("Monedas de 1: " + moneda1);
+
+         final String MENSAJE = (CAMBIO >= 0)?"El cambio es: " + CAMBIO + " euros":"Error: No hay cambio suficiente, faltan: " + (CAMBIO * -1) + " euros";
+
+        System.out.println(MENSAJE);
+        System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
+        scanner.close(); 
 
     }
 }
