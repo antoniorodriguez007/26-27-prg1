@@ -82,7 +82,7 @@ public class DevolverCambio {
         System.out.println("Monedas de 0.01:  " + moneda01);
 
         final String MENSAJE = (ENTERO >= 0) ? "El cambio es: " + ENTERO +"."+ CENTAVO +  " euros"
-                : "Error: No hay cambio suficiente, faltan: " + (ENTERO * -1) + " euros";
+                : "Error: No hay cambio suficiente, faltan: " + (ENTERO * -1) + " euros"; //aqui queria poner tambien que pusiera los centavos pero no se me ocurria una forma, si me podria decir en un comment la manera lo apreciaria!
 
         System.out.println(MENSAJE);
         System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
