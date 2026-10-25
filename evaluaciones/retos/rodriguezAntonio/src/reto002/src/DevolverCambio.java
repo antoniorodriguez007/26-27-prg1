@@ -52,6 +52,22 @@ public class DevolverCambio {
         int moneda50 = resto_centavo / MONEDA50;
         resto_centavo = resto_centavo % MONEDA50;
 
+        final int MONEDA20 = 20;
+        int moneda20 = resto_centavo / MONEDA20;
+        resto_centavo = resto_centavo % MONEDA20;
+
+        final int MONEDA10 = 10;
+        int moneda10 = resto_centavo / MONEDA10;
+        resto_centavo = resto_centavo % MONEDA10;
+
+        final int MONEDA5 = 5;
+        int moneda5 = resto_centavo / MONEDA5;
+        resto_centavo = resto_centavo % MONEDA5;
+
+        final int MONEDA01 = 1;
+        int moneda01 = resto_centavo / MONEDA01;
+        resto_centavo = resto_centavo % MONEDA01;
+
         System.out.println("Billetes de 100: " + billete100);
         System.out.println("Billetes de 50: " + billete50);
         System.out.println("Billetes de 20: " + billete20);
@@ -60,12 +76,17 @@ public class DevolverCambio {
         System.out.println("Monedas de 2: " + moneda2);
         System.out.println("Monedas de 1: " + moneda1);
         System.out.println("Monedas de 0.50:  " + moneda50);
+        System.out.println("Monedas de 0.20:  " + moneda20);
+        System.out.println("Monedas de 0.10:  " + moneda10);
+        System.out.println("Monedas de 0.05:  " + moneda5);
+        System.out.println("Monedas de 0.01:  " + moneda01);
 
-         final String MENSAJE = (ENTERO >= 0)?"El cambio es: " + ENTERO + " euros":"Error: No hay cambio suficiente, faltan: " + (ENTERO * -1) + " euros";
+        final String MENSAJE = (ENTERO >= 0) ? "El cambio es: " + ENTERO +"."+ CENTAVO +  " euros"
+                : "Error: No hay cambio suficiente, faltan: " + (ENTERO * -1) + " euros";
 
         System.out.println(MENSAJE);
         System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
-        scanner.close(); 
+        scanner.close();
 
     }
 }
