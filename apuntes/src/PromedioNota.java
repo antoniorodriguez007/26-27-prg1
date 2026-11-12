@@ -25,5 +25,7 @@ class PromedioNota {
 
         promedio = sumaNotas / cantidadNotas;
         System.out.println("El promedio es " + promedio);
+
+        //test de commit parcial
     }
 }
