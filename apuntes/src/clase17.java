@@ -5,14 +5,14 @@ class clase17 {
 
         int[] arrayDeEnteros = {1, 2, 3, 4};
 
-        int[][] notas = { //crrar una array de referencias a una array de enteros
-
+        int[][] notas = {
             arrayDeEnteros,
-            {4, 5, 6},
-            {7, 8, 9},
-            null //espacio de memoria donde no hay nada, apuntas a la nada
-        //la matriz puede no ser cuadrado
-        }; //basicamente es una tabal
+            arrayDeEnteros,
+            arrayDeEnteros
+        };
 
+        for (int i = 0; i < notas.length; i++) {
+            System.out.println(notas[i]);
+        }
     }
 }
