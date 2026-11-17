@@ -12,7 +12,10 @@ class clase17 {
         };
 
         for (int i = 0; i < notas.length; i++) {
-            System.out.println(notas[i]);
+            for (int j = 0; j < notas[i].length; j++) {
+                System.out.print(notas[i][j] + " , ");
+            }
+            System.out.println();
         }
     }
 }
