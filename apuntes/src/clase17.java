@@ -3,21 +3,16 @@ class clase17 {
 
     public static void main(String[] args) {
 
-        int[] notas; //Variable de referencia de arrays tipo int 1 espacio
+        int[] arrayDeEnteros = {1, 2, 3, 4};
 
-        notas = new int[3]; //notas guarda la direccion y new int tiene una variable de 3, asiqeu hay 4 espacios de memoria en uso, 1 + 3 = 4
+        int[][] notas = { //crrar una array de referencias a una array de enteros
 
-        notas[0] = 7;
-        notas[2] = 10;
-        int[] otrasNotas = {2, 3};  //1 espacio por var de ref y se agregan 2 por el array de otrasnotas
-
-        otrasNotas = notas; //deja de apuntar a 2,3 y desaparecen los arrays, hay 5 espacios
-
-        int tamañoarray = notas.length;
-
-        for (int i = 0; i < notas.length; i++) {
-            System.err.println(notas[i]);
-        }
+            arrayDeEnteros,
+            {4, 5, 6},
+            {7, 8, 9},
+            null //espacio de memoria donde no hay nada, apuntas a la nada
+        //la matriz puede no ser cuadrado
+        }; //basicamente es una tabal
 
     }
 }
